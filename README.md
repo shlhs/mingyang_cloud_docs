@@ -7,7 +7,7 @@
 ### 环境准备
  - Window系统的PC或服务器一台（named PC0）。操作系统：Windows Server 2008/2012 64位，硬件 2核/8G/40G或更高配置
  
- - Linux Ubuntu14.04系统的PC或服务器一台（named PC1）, CPU至少>4核，内存>4G, 硬盘>40G:    
+ - Linux Ubuntu14.04系统的PC或服务器一台（named PC1）, CPU至少>4核，内存>8G, 硬盘>200G:    
 ```Bash
 root@iZ28yy5kssxZ:~# lsb_release -a 
 No LSB modules are available.
