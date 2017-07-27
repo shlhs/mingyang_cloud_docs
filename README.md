@@ -5,7 +5,9 @@
 ## How to deploy
 
 ### 环境准备
- - Linux系统的PC或服务器, 推荐使用Ubuntu14.04:    
+ - Window系统的PC或服务器一台（named PC0），???
+ 
+ - Linux系统的PC或服务器一台（named PC1）, 推荐使用Ubuntu14.04:    
 ```Bash
 root@iZ28yy5kssxZ:~# lsb_release -a 
 No LSB modules are available.
@@ -14,7 +16,7 @@ Description:	Ubuntu 14.04.4 LTS
 Release:	14.04
 Codename:	trusty
 ```
- - 安装java运行环境(1.8)，结果如下:    
+ - PC1上安装java运行环境(1.8)，结果如下:    
 ```shell
 root@iZ28yy5kssxZ:~# java -version
 java version "1.8.0_101"
@@ -22,14 +24,14 @@ Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
 Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
 ```
 
- - 安装进程管理工具[Supervisor](http://www.supervisord.org), 版本不低于3.3.1, 结果如下:   
+ - PC1上安装进程管理工具[Supervisor](http://www.supervisord.org), 版本不低于3.3.1, 结果如下:   
 ```shell
 root@iZ28yy5kssxZ:~# supervisord --version
 3.3.1
 ```
- - 安装Mysql Service(5.6.33)
+ - PC1上安装Mysql Service(5.6.33)
  
- - 安装Redis(3.2.3)
+ - PC1上安装Redis(3.2.3)
   
  
 ### 准备资源文件(待完善), 具体文件见[附件](https://github.com/shlhs/wuxi_simufiled_docs/blob/master/deploy_config)
