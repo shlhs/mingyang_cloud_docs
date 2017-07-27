@@ -27,7 +27,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
 root@iZ28yy5kssxZ:~# supervisord --version
 3.3.1
 ```
- - 准备Mysql Service，也可直接使用已有; 创建相应DB及其TABLE；以在此台机器上，可连接到数据库为结果。可以直接运行sql附件文件（simufiled_stru），具体[sql](https://github.com/shlhs/wuxi_simufiled_docs/blob/master/sql_back/simufiled_stru.sql)如下：  
+ - 准备Mysql Service(5.6.33)，也可直接使用已有; 创建相应DB及其TABLE；以在此台机器上，可连接到数据库为结果。可以直接运行sql附件文件（simufiled_stru），具体[sql](https://github.com/shlhs/wuxi_simufiled_docs/blob/master/sql_back/simufiled_stru.sql)如下：  
   
  
 ### 准备资源文件, 具体文件见[附件](https://github.com/shlhs/wuxi_simufiled_docs/blob/master/deploy_config)
