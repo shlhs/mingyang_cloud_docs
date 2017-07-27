@@ -5,7 +5,7 @@
 ## How to deploy
 
 ### 环境准备
- - Window系统的PC或服务器一台（named PC0），???
+ - Window系统的PC或服务器一台（named PC0）。操作系统：Windows Server 2008/2012 64位，硬件 2核/8G/40G或更高配置
  
  - Linux系统的PC或服务器一台（named PC1）, 推荐使用Ubuntu14.04:    
 ```Bash
