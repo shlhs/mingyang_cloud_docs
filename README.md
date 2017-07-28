@@ -2,9 +2,7 @@
 
 明阳云平台，云端服务 
 
-## How to deploy
-
-### 环境准备
+## 环境准备
  - Window系统的PC或服务器一台（named PC0）。操作系统：Windows Server 2008/2012 64位，硬件 2核/8G/40G或更高配置
  
  - Linux Ubuntu14.04系统的PC或服务器一台（named PC1）, CPU至少>4核，内存>8G, 硬盘>200G:    
@@ -33,10 +31,13 @@ root@iZ28yy5kssxZ:~# supervisord --version
  
  - PC1上安装Redis(3.2.3)
 
-### 下载相关软件与配置文件
- - PC0     
-   ？
- - PC1      
+## PC0 组态软件的安装部署
+
+### TODO
+
+## PC1 云平台服务的安装部署
+
+### 下载相关软件与配置文件      
    相关文件[下载地址](https://github.com/shlhs/mingyang_cloud_docs/tree/master/01)         
    最终效果如下图所示       
    ![image](https://github.com/shlhs/mingyang_cloud_docs/blob/master/pic/pc1_ready.jpeg)
