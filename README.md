@@ -32,9 +32,16 @@ root@iZ28yy5kssxZ:~# supervisord --version
  - PC1上安装Mysql Service(5.6.33)
  
  - PC1上安装Redis(3.2.3)
-  
+
+### 下载相关软件与配置文件
+ - PC0     
+   ？
+ - PC1      
+   相关文件[下载地址](https://github.com/shlhs/mingyang_cloud_docs/tree/master/01)         
+   最终效果如下图所示       
+   ![image](https://github.com/shlhs/mingyang_cloud_docs/blob/master/pic/pc1_ready.jpeg)
  
-### 准备资源文件(待完善), 具体文件见[附件](https://github.com/shlhs/wuxi_simufiled_docs/blob/master/deploy_config)
+### 准备资源文件, 具体文件见[附件](https://github.com/shlhs/wuxi_simufiled_docs/blob/master/deploy_config)
  - 服务运行软件包，simufiled-svc-1.0.0.jar (./ 目录下)
  - 服务启动配置文件 [supervisord_thumber_websvc.conf](https://github.com/shlhs/wuxi_simufiled_docs/blob/master/deploy_config/supervisord_thumber_websvc.conf) (./ 目录下)，需根据实际情况修改，simufiled-svc-1.0.0.jar所在位置、服务启动参数（数据库信息、对外端口等）、log存储路径:     
   ***/home/simufiled/ 需根据实际进行替换;***      
