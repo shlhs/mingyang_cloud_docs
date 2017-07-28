@@ -66,7 +66,13 @@ supervisord -c ./supervisord_mingyang_cloud.conf
 
 ### 检查相关进程是否运行，正常情况下一共有四个相关进程（三个 java、supervisord）正在运行， 也可通过端口占用情况查看。结果如下:    
 ```shell
-todo
+root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8099
+tcp        0      0 *:8099                  *:*                     LISTEN      24073/java
+root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8098
+tcp        0      0 *:8098                  *:*                     LISTEN      24075/java
+root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9090
+tcp        0      0 *:9090                  *:*                     LISTEN      24074/java
+root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
 ```
 
 ### 检查业务是否正常
