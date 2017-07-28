@@ -42,7 +42,7 @@ root@iZ28yy5kssxZ:~# supervisord --version
   - DB2的sql文件 待补充
 
 ### 下载相关软件与配置文件      
-   相关文件[下载地址](https://github.com/shlhs/mingyang_cloud_docs/tree/master/01)         
+   [下载地址](https://github.com/shlhs/mingyang_cloud_docs/tree/master/01)         
    最终效果如下图所示       
    ![image](https://github.com/shlhs/mingyang_cloud_docs/blob/master/pic/pc1_ready.jpeg)
  
