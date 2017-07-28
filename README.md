@@ -54,16 +54,25 @@ root@iZ28yy5kssxZ:~# supervisord --version
 ### 启动运行
  - 确认9090、8098、8099 三个端口未被占用，如存在占用，请关闭相应的进程。所需效果如下：
  ```shell
- todo
+root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9090
+root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8098
+root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8099
+root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
  ```
  - 通过以上述b配置文件，运行supervisord即可   
 ```shell
-supervisord -c ./supervisord_cloud_svc.conf
+supervisord -c ./supervisord_mingyang_cloud.conf
 ```
 
 ### 检查相关进程是否运行，正常情况下一共有四个相关进程（三个 java、supervisord）正在运行， 也可通过端口占用情况查看。结果如下:    
 ```shell
-todo
+root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8099
+tcp        0      0 *:8099                  *:*                     LISTEN      24073/java
+root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8098
+tcp        0      0 *:8098                  *:*                     LISTEN      24075/java
+root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9090
+tcp        0      0 *:9090                  *:*                     LISTEN      24074/java
+root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
 ```
 
 ### 检查业务是否正常
