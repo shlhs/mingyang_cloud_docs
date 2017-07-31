@@ -43,9 +43,9 @@ root@iZ28yy5kssxZ:~# supervisord --version
 ## PC1 云平台服务的安装部署
 
 ### 创建Mysql DB    
-  - DB1的sql文件 待补充      
+  - DB1的[sql文件](https://github.com/shlhs/mingyang_cloud_docs/blob/master/sql/lhs_cloud.sql)      
   
-  - DB2的sql文件 待补充
+  - DB2的[sql文件](https://github.com/shlhs/mingyang_cloud_docs/blob/master/sql/lhs_cloud_collector.sql)
 
 ### 下载相关软件与配置文件      
    [下载地址](https://github.com/shlhs/mingyang_cloud_docs/tree/master/01)         
