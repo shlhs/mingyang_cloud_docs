@@ -31,9 +31,14 @@ root@iZ28yy5kssxZ:~# supervisord --version
  
  - PC1上安装Redis(3.2.3)
 
-## PC0 组态软件的安装部署
+## PC0 数据采集服务软件的安装部署
 
-### TODO
+### 下载采集服务文件
+   [下载地址](https://github.com/shlhs/mingyang_cloud_docs/tree/master/01/collector)       
+
+### 采集服务安装配置
+数据采集服务软件collector为免安装，一台PC上可以运行多个采集服务软件（需要处于不同的目录下）。启动采集服务软件Kuaikong.exe后，点击工具条上的“设置”按钮“来配置工程管理器的Redis和Mysql连接信息。如下图：
+![image](https://github.com/shlhs/mingyang_cloud_docs/blob/master/pic/collector.jpg)
 
 ## PC1 云平台服务的安装部署
 
