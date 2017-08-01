@@ -30,6 +30,7 @@ root@iZ28yy5kssxZ:~# supervisord --version
  - PC1上安装Mysql Service(5.6.33)
  
  - PC1上安装Redis(3.2.3)
+![image](https://github.com/shlhs/mingyang_cloud_docs/blob/master/pic/deployment.jpg)
 
 ## PC0 数据采集服务软件的安装部署
 
