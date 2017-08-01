@@ -42,6 +42,9 @@ root@iZ28yy5kssxZ:~# supervisord --version
 数据采集服务软件collector为免安装，一台PC上可以运行多个采集服务软件（需要处于不同的目录下）。启动采集服务软件Kuaikong.exe后，点击工具条上的“设置”按钮“来配置工程管理器的Redis和Mysql连接信息。如下图：
 ![image](https://github.com/shlhs/mingyang_cloud_docs/blob/master/pic/collector.jpg)
 
+### 采集服务的使用参见：
+https://github.com/shlhs/mingyang_cloud_docs/blob/master/01/Collector/%E9%87%87%E9%9B%86%E5%99%A8%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.doc
+
 ## PC1 云平台服务的安装部署
 
 ### 创建Mysql DB    
