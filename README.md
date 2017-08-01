@@ -83,4 +83,17 @@ root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
 ### 检查业务是否正常
  - 服务后台，http://ip:9090/login, 可正常访问，输入正确的用户信息，可登录。
  
+ 
+### <font color=red >注意事项</font>
+
+1. 设置Mysql允许远程链接（初始默认是不允许的，如果不设置 服务没发访问数据库，登录不了）         
+   设置bind-address = 0.0.0.0         
+   设置 privileges        
+   可[参考](http://blog.csdn.net/hunauchenym/article/details/6933038)
+   
+2. 设置redis允许远程链接（ 初始默认是不允许的）       
+   设置bind-address = 0.0.0.0
+ 
 ### FAQ
+
+#### 
