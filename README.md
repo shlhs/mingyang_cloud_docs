@@ -74,6 +74,11 @@ root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
 supervisord -c ./supervisord_mingyang_cloud.conf
 ```
 
+### 停止运行
+ - 杀掉启动的supervisord进程： ps -ef | grep superv , 查看supervisord的进程号(eg， 4035)         
+    kill 4035(需要等一会，直到supervisord进程 不存在)
+    
+
 ### 检查相关进程是否运行，正常情况下一共有四个相关进程（三个 java、supervisord）正在运行， 也可通过端口占用情况查看。结果如下:    
 ```shell
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8099
