@@ -100,5 +100,7 @@ root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
    设置bind-address = 0.0.0.0
  
 ### FAQ
-
+ 1. 启动redis            
+ 到redis所在目录（下载时保存的），执行 ./redis-server xxx.conf, 更多方式[参照](http://www.cnblogs.com/pqchao/p/6549510.html)
+ 
 #### 
