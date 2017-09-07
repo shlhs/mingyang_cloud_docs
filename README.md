@@ -33,6 +33,10 @@ root@iZ28yy5kssxZ:~# supervisord --version
  
 ![image](https://github.com/shlhs/mingyang_cloud_docs/blob/master/pic/deployment.jpg)
 
+- PC1上安装nodejs运行环境和npm管理器，使得从命令行启动nodejs，npm能够成功，Windows可以参考[NodeJS、NPM安装配置步骤](http://jingyan.baidu.com/article/91f5db1b2bb6941c7f05e33c.html)，Linux需根据具体的版本执行nodejs和npm的安装命令
+ 
+ - PC1上安装fis3发布管理器:npm install -g fis3
+
 ## PC0 数据采集服务软件的安装部署
 
 ### 下载采集服务文件
@@ -67,6 +71,7 @@ https://github.com/shlhs/mingyang_cloud_docs/blob/master/01/Collector/%E9%87%87%
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9090
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8098
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8099
+root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9095
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
  ```
  - 通过以上述b配置文件，运行supervisord即可   
@@ -79,7 +84,7 @@ supervisord -c ./supervisord_mingyang_cloud.conf
     kill 4035(需要等一会，直到supervisord进程 不存在)
     
 
-### 检查相关进程是否运行，正常情况下一共有四个相关进程（三个 java、supervisord）正在运行， 也可通过端口占用情况查看。结果如下:    
+### 检查相关进程是否运行，正常情况下一共有五个相关进程（三个 java、supervisord、nodejs）正在运行， 也可通过端口占用情况查看。结果如下:    
 ```shell
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8099
 tcp        0      0 *:8099                  *:*                     LISTEN      24073/java
@@ -87,6 +92,8 @@ root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8098
 tcp        0      0 *:8098                  *:*                     LISTEN      24075/java
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9090
 tcp        0      0 *:9090                  *:*                     LISTEN      24074/java
+root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9095
+tcp        0      0 *:9090                  *:*                     LISTEN      24076/java
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
 ```
 
