@@ -31,11 +31,9 @@ root@iZ28yy5kssxZ:~# supervisord --version
  
  - PC1上安装Redis(3.2.3)
  
-![image](https://github.com/shlhs/mingyang_cloud_docs/blob/master/pic/deployment.jpg)
-
-- PC1上安装nodejs运行环境和npm管理器，使得从命令行启动nodejs，npm能够成功，Windows可以参考[NodeJS、NPM安装配置步骤](http://jingyan.baidu.com/article/91f5db1b2bb6941c7f05e33c.html)，Linux需根据具体的版本执行nodejs和npm的安装命令
+ - PC1上安装apache2 server（2.2+）
  
- - PC1上安装fis3发布管理器:npm install -g fis3
+![image](https://github.com/shlhs/mingyang_cloud_docs/blob/master/pic/deployment.jpg)
 
 ## PC0 数据采集服务软件的安装部署
 
@@ -71,7 +69,6 @@ https://github.com/shlhs/mingyang_cloud_docs/blob/master/01/Collector/%E9%87%87%
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9090
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8098
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8099
-root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9095
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
  ```
  - 通过以上述b配置文件，运行supervisord即可   
@@ -92,10 +89,20 @@ root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8098
 tcp        0      0 *:8098                  *:*                     LISTEN      24075/java
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9090
 tcp        0      0 *:9090                  *:*                     LISTEN      24074/java
-root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9095
-tcp        0      0 *:9090                  *:*                     LISTEN      24076/java
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
 ```
+
+### 部署cloud-map服务
+ - 安装好apache服务器，并通过修改配置文件httpd.conf配置好监听端口。apache默认的监听端口时80，配置文件中描述为Listen 80，将其修改为Listen 9095
+ - 将发布的cloud-map目录下的文件拷贝到apache服务器的${DocumentRoot}目录下
+ --  ${DocumentRoot}目录是在httd.conf中指定的，可根据自己的需要修改，参考下面的例子：
+ ```
+   Define SRVROOT "/var/www"
+   ServerRoot "${SRVROOT}"
+   DocumentRoot "${SRVROOT}/htdocs"
+```
+ - 修改${DocumentRoot}/script/common/urls.js中的general_url的值，指向后台服务的url(如:http://192.168.1.100:8099/v1)
+ - 启动apache服务器，访问http://服务器地址:端口号/manager.html ，测试服务是否已经启动完毕
 
 ### 检查业务是否正常
  - 服务后台，http://ip:9090/login, 可正常访问，输入正确的用户信息，可登录。
