@@ -71,7 +71,6 @@ https://github.com/shlhs/mingyang_cloud_docs/blob/master/01/Collector/%E9%87%87%
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9090
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8098
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8099
-root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9095
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
  ```
  - 通过以上述b配置文件，运行supervisord即可   
@@ -92,10 +91,14 @@ root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 8098
 tcp        0      0 *:8098                  *:*                     LISTEN      24075/java
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9090
 tcp        0      0 *:9090                  *:*                     LISTEN      24074/java
-root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud# netstat -ap | grep 9095
-tcp        0      0 *:9090                  *:*                     LISTEN      24076/java
 root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
 ```
+
+### 部署cloud-map服务
+ - 安装号apache服务，并配置好监听端口（系统默认的地图服务端口是9095）
+ - 将发布的cloud-map目录下的文件拷贝到apache服务器的DocumentRoot目录下
+ - 修改DocumentRoot/script/common/urls.js中的general_url的值，指向后台服务的url(如:http://192.168.1.100:8099/v1)
+ - 启动apache服务器，访问http://服务器地址:端口号/manager.html ，测试服务是否已经启动完毕
 
 ### 检查业务是否正常
  - 服务后台，http://ip:9090/login, 可正常访问，输入正确的用户信息，可登录。
