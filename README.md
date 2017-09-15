@@ -95,7 +95,7 @@ root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
 ```
 
 ### 部署cloud-map服务
- - 安装号apache服务，并配置好监听端口（系统默认的地图服务端口是9095）
+ - 安装好apache服务，并配置好监听端口（系统默认的地图服务端口是9095）
  - 将发布的cloud-map目录下的文件拷贝到apache服务器的DocumentRoot目录下
  - 修改DocumentRoot/script/common/urls.js中的general_url的值，指向后台服务的url(如:http://192.168.1.100:8099/v1)
  - 启动apache服务器，访问http://服务器地址:端口号/manager.html ，测试服务是否已经启动完毕
