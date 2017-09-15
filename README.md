@@ -93,13 +93,14 @@ root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
 ```
 
 ### 部署cloud-map服务
- - 安装好apache服务器，并通过修改配置文件httpd.conf配置好监听端口
-   apache默认的监听端口时80，配置文件中描述为Listen 80，将其修改为Listen 9095
+ - 安装好apache服务器，并通过修改配置文件httpd.conf配置好监听端口。apache默认的监听端口时80，配置文件中描述为Listen 80，将其修改为Listen 9095
  - 将发布的cloud-map目录下的文件拷贝到apache服务器的${DocumentRoot}目录下
-   ${DocumentRoot}目录是在httd.conf中指定的，可根据自己的需要修改，参考下面的例子：
+ --  ${DocumentRoot}目录是在httd.conf中指定的，可根据自己的需要修改，参考下面的例子：
+ ```
    Define SRVROOT "/var/www"
    ServerRoot "${SRVROOT}"
    DocumentRoot "${SRVROOT}/htdocs"
+```
  - 修改${DocumentRoot}/script/common/urls.js中的general_url的值，指向后台服务的url(如:http://192.168.1.100:8099/v1)
  - 启动apache服务器，访问http://服务器地址:端口号/manager.html ，测试服务是否已经启动完毕
 
