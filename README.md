@@ -55,7 +55,7 @@ https://github.com/shlhs/mingyang_cloud_docs/blob/master/01/Collector/%E9%87%87%
   - DB2的[sql文件](https://github.com/shlhs/mingyang_cloud_docs/blob/master/sql/lhs_cloud_collector.sql)
 
 ### 下载相关软件与配置文件      
-   [下载地址](https://github.com/shlhs/mingyang_cloud_docs/tree/master/01)         
+   [下载地址](https://github.com/shlhs/mingyang_cloud_docs/tree/master/02-2)         
    最终效果如下图所示       
    ![image](https://github.com/shlhs/mingyang_cloud_docs/blob/master/pic/pc1_ready.jpeg)
  
