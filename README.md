@@ -50,9 +50,9 @@ https://github.com/shlhs/mingyang_cloud_docs/blob/master/01/Collector/%E9%87%87%
 ## PC1 云平台服务的安装部署
 
 ### 创建Mysql DB    
-  - DB1的[sql文件](https://github.com/shlhs/mingyang_cloud_docs/blob/master/sql/lhs_cloud.sql)      
+  - DB1的[sql文件](https://github.com/shlhs/mingyang_cloud_docs/blob/master/02-2/inti_sql/lhs_cloud_init_02.sql)      
   
-  - DB2的[sql文件](https://github.com/shlhs/mingyang_cloud_docs/blob/master/sql/lhs_cloud_collector.sql)
+  - DB2的[sql文件](https://github.com/shlhs/mingyang_cloud_docs/blob/master/02-2/inti_sql/lhs_cloud_init_02.sql)
 
 ### 下载相关软件与配置文件      
    [下载地址](https://github.com/shlhs/mingyang_cloud_docs/tree/master/02-2)         
