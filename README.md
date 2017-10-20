@@ -105,7 +105,7 @@ root@iZ28yy5kssxZ:/home/mingyang-lhs-cloud#
  - 启动apache服务器，访问http://服务器地址:端口号/manager.html ，测试服务是否已经启动完毕
 
 ### 检查业务是否正常
- - 服务后台，http://ip:9090/login, 可正常访问，输入正确的用户信息，可登录。
+ - 服务后台，http://ip:9090, 可正常访问，输入正确的用户信息，可登录。
  
  
 ### <font color=red >注意事项</font>
